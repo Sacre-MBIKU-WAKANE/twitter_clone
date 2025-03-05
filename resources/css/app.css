@@ -1,2 +1,5 @@
 @import 'tailwindcss';
 @source "../views";
+@theme {
+  --color-border: #2f3336;
+}
