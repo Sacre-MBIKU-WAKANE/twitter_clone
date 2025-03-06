@@ -23,4 +23,7 @@ export default class TweetControleursController {
   getPostHome(ctx: HttpContext) {
     return ctx.view.render('pages/home', { posts })
   }
+  getProfil(ctx: HttpContext) {
+    return ctx.view.render('pages/profil', {})
+  }
 }
