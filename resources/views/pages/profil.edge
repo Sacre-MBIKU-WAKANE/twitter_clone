@@ -73,23 +73,39 @@
     class="min-h-screen w-screen font-sans bg-black text-[#D9D9D9] flex justify-center px-22 overflow-x-hidden"
   >
     {{-- <div class="flex items-center justify-center"> --}}
-    {{-- sidebar --}}
-    @include('pages/sidebar')
 
+    @include('pages/sidebar')
     <div class="flex-none border border-[#2F3336] pt-2  max-lg:flex-1 md:w-1/2 max-lg:px-0 ">
-      <div class="flex justify-between items-center border-b  border-[#2F3336] w-full">
-        <h1 class="px-4 py-4  font-bold text-xl text-white  ">
-          Home
-        </h1>
-        <img src="/resources/imgs/Top-Tweets.svg" />
+      <div class="flex  items-center border-b  border-[#2F3336] w-full pl-4">
+        <a href="/" class=" w-8 h-8 p-2 rounded-full flex items-center justify-between hover:bg-[#2F3336]">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-arrow-left text-white "
+          >
+            <path d="m12 19-7-7 7-7" />
+            <path d="M19 12H5" />
+          </svg>
+        </a>
+        <div class="flex flex-col px-3 pb-2">
+          <h1 class=" font-bold text-xl text-white  ">
+            Patrick Kudiatu
+          </h1>
+          <span class="text-sm/3">10 Posts</span>
+        </div>
+
       </div>
       <div class="flex gap-2 pl-4 pt-1 border-b border-[#2F3336]">
-        {{-- <div> --}}
-        <a href="/username" class=" w-12 h-12 ">
-          <img src="/resources/imgs/profil.jpg" alt="profil" class="w-12 h- rounded-full  object-cover" />
-        </a>
-        {{-- <img src="/resources/imgs/Profile-Photo.svg" alt="profil user" class="flex justify-start" /> --}}
-        {{-- </div> --}}
+        <div>
+          <img src="/resources/imgs/Profile-Photo.svg" alt="profil user" class="flex justify-start" />
+        </div>
         <div class="flex flex-col gap-6 w-full">
           <form class="pl-3 ">
             <textarea
