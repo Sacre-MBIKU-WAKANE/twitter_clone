@@ -22,14 +22,16 @@ import { users, tweets } from '../../resources/data/data.ts'
 
 export default class TweetControleursController {
   getPostHome(ctx: HttpContext) {
-    const tweetsResponse = tweets.find((tweet) => {
+    const tweetsResponses = tweets.map((tweet) => {
       const author = users.find((user) => user.IDuser === tweet.IDuser)
+
       return {
         ...tweet,
         author,
       }
     })
-    return ctx.view.render('pages/home', { tweetsResponse })
+    // console.log(tweetsResponses)
+    return ctx.view.render('pages/home', { tweetsResponses })
   }
   getProfil(ctx: HttpContext) {
     return ctx.view.render('pages/profil', {})

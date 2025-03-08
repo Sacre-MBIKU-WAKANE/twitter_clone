@@ -16,7 +16,7 @@ export const users: Users[] = [
     name: 'Kudiatu',
     prenom: 'Patrick',
     email: 'kudiatu@gmail.com',
-    pic: 'resources/imgs/profil.svg',
+    pic: '/resources/imgs/profil.jpg',
     IDrole: 2,
   },
 
@@ -26,7 +26,7 @@ export const users: Users[] = [
     name: 'Marie',
     prenom: 'NomMarie',
     email: 'marie@example.com',
-    pic: 'resources/imgs/profil.svg',
+    pic: '/resources/imgs/Img.svg',
     IDrole: 102,
   },
   {
@@ -35,7 +35,7 @@ export const users: Users[] = [
     name: 'John',
     prenom: 'NomJohn',
     email: 'john@example.com',
-    pic: 'resources/imgs/bloc.svg',
+    pic: '/resources/imgs/Img.svg',
     IDrole: 103,
   },
   {
@@ -44,7 +44,7 @@ export const users: Users[] = [
     name: 'Anna',
     prenom: 'NomAnna',
     email: 'anna@example.com',
-    pic: 'resources/imgs/profil.svg',
+    pic: '/resources/imgs/Img.svg',
     IDrole: 104,
   },
   {
@@ -53,7 +53,7 @@ export const users: Users[] = [
     name: 'cnn',
     prenom: 'NomLuc',
     email: 'luc@example.com',
-    pic: 'resources/imgs/Tweet-Profile-Photo.svg',
+    pic: '/resources/imgs/blog.svg',
     IDrole: 105,
   },
   {
@@ -62,7 +62,7 @@ export const users: Users[] = [
     name: 'Laura',
     prenom: 'NomLaura',
     email: 'laura@example.com',
-    pic: 'resources/imgs/profil.svg',
+    pic: '/resources/imgs/profil.svg',
     IDrole: 106,
   },
   {
@@ -71,7 +71,7 @@ export const users: Users[] = [
     name: 'Pierre',
     prenom: 'NomPierre',
     email: 'pierre@example.com',
-    pic: 'resources/imgs/profil.svg',
+    pic: '/resources/imgs/profil.svg',
     IDrole: 107,
   },
   {
@@ -80,7 +80,7 @@ export const users: Users[] = [
     name: 'Emma',
     prenom: 'NomEmma',
     email: 'emma@example.com',
-    pic: 'resources/imgs/profil.svg',
+    pic: '/resources/imgs/profil.svg',
     IDrole: 108,
   },
   {
@@ -89,7 +89,7 @@ export const users: Users[] = [
     name: 'Paul',
     prenom: 'NomPaul',
     email: 'paul@example.com',
-    pic: 'resources/imgs/profil.svg',
+    pic: '/resources/imgs/profil.svg',
     IDrole: 109,
   },
   {
@@ -98,7 +98,7 @@ export const users: Users[] = [
     name: 'Léa',
     prenom: 'NomLéa',
     email: 'lea@example.com',
-    pic: 'resources/imgs/profil.svg',
+    pic: '/resources/imgs/profil.svg',
     IDrole: 110,
   },
 ]
