@@ -26,7 +26,7 @@ export const users: Users[] = [
     name: 'Marie',
     prenom: 'NomMarie',
     email: 'marie@example.com',
-    pic: '/resources/imgs/Img.svg',
+    pic: '/resources/imgs/women.png',
     IDrole: 102,
   },
   {
@@ -35,7 +35,7 @@ export const users: Users[] = [
     name: 'John',
     prenom: 'NomJohn',
     email: 'john@example.com',
-    pic: '/resources/imgs/Img.svg',
+    pic: '/resources/imgs/man.png',
     IDrole: 103,
   },
   {

@@ -97,15 +97,15 @@
 
         <div class="flex  px-4 py-4 ">
           {{-- <div> --}}
-          <img
-            src="{{ item.author.pic }}"
-            alt="profil user"
-            class="flex justify-start w-12 h-12 rounded-full object-cover"
-          />
+          <a href="/{{ item.author.username }}" class="w-12 h-12">            <img
+              src="{{ item.author.pic }}"
+              alt="profil user"
+              class="flex justify-start rounded-full object-cover"
+            /></a>
           {{-- </div> --}}
           <div class="flex flex-col gap-3 w-full pl-3">
             <div class="flex flex-col gap-1">
-              <span class="font-bold text-sm flex gap-1">                <a href="">{{ item.author.name }}</a>                <img src="/resources/imgs/Verified.svg" class="w-5 h-5" /></span>
+              <span class="font-bold text-sm flex gap-1">                <a href="/{{ item.author.username }}">{{ item.author.name }}</a>                <img src="/resources/imgs/Verified.svg" class="w-5 h-5" /></span>
               <p class="text-sm">
                 {{ item.contenu }}
               </p>

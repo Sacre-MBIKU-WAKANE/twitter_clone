@@ -13,3 +13,4 @@ const TweetControleursController = () => import('#controllers/tweet_controleurs_
 
 // router.on('/').render('pages/home')
 router.get('/', [TweetControleursController, 'getPostHome'])
+router.get('/:username', [TweetControleursController, 'getProfil'])
