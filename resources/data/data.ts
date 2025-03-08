@@ -58,11 +58,11 @@ export const users: Users[] = [
   },
   {
     IDuser: 6,
-    username: 'laura789',
-    name: 'Laura',
-    prenom: 'NomLaura',
+    username: '7sur7.CD',
+    name: '7sur7',
+    prenom: '',
     email: 'laura@example.com',
-    pic: '/resources/imgs/profil.svg',
+    pic: '/resources/imgs/7sur7.jpg',
     IDrole: 106,
   },
   {
@@ -144,6 +144,14 @@ export const tweets: Tweets[] = [
     contenu:
       'Learn about the history, usage and variations of Lorem Ipsum, the industrys standard dummy text for over 2000 years. Generate your own Lorem Ipsum with a dictionary of over 200 Latin words and a random sentence structure..',
     pic_tweet: '/resources/imgs/Img.svg',
+    date_pub: '2025-03-07T17:30:00Z',
+  },
+  {
+    IDtweet: 4,
+    IDuser: 6,
+    contenu:
+      'Kinshasa : La mise en garde sévère du gouverneur contre les camions bétonnières qui abîment la chaussée (communiqué)',
+    pic_tweet: '/resources/imgs/gouv.jpeg',
     date_pub: '2025-03-07T17:30:00Z',
   },
 ]

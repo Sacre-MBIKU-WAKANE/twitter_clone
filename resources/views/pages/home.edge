@@ -70,10 +70,11 @@
     @stack('dumper')
   </head>
   <body
-    class="min-h-screen w-screen font-sans bg-black text-[#D9D9D9] flex justify-center px-22 overflow-x-hidden"
+    class="min-h-screen w-screen font-sans bg-black text-[#D9D9D9] flex justify-center px-22 overflow-x-hidden "
   >
-    {{-- <div class="flex items-center justify-center"> --}}
+
     {{-- sidebar --}}
+
     @include('pages/sidebar')
 
     <div class="flex-none border border-[#2F3336] pt-2  max-lg:flex-1 md:w-1/2 max-lg:px-0 ">
@@ -88,11 +89,13 @@
         <a href="/username" class=" w-12 h-12 ">
           <img src="/resources/imgs/profil.jpg" alt="profil" class="w-12 h- rounded-full  object-cover" />
         </a>
-        {{-- <img src="/resources/imgs/Profile-Photo.svg" alt="profil user" class="flex justify-start" /> --}}
-        {{-- </div> --}}
-        {{-- form --}}
+
+        {{-- appel du formulaire --}}
         @include('pages/form')
+
       </div>
+
+      {{-- affichage de tweets --}}
       @each(item in tweetsResponses)
 
         <div class="flex  px-4 py-4 ">
@@ -123,7 +126,7 @@
                   stroke-width="2"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  class="lucide lucide-message-circle text-[#6E767D]"
+                  class="lucide lucide-message-circle text-[#6E767D] cursor-pointer hover:text-blue-500"
                 >
                   <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
                 </svg>                <span class="text-[#6E767D] text-sm">30</span>
@@ -139,7 +142,7 @@
                   stroke-width="2"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  class="lucide lucide-repeat-2 text-[#6E767D]"
+                  class="lucide lucide-repeat-2 text-[#6E767D]  cursor-pointer hover:text-blue-500"
                 >
                   <path d="m2 9 3-3 3 3" />
                   <path d="M13 18H7a2 2 0 0 1-2-2V6" />
@@ -147,7 +150,7 @@
                   <path d="M11 6h6a2 2 0 0 1 2 2v10" />
                 </svg>                <span class="text-[#6E767D] text-sm">30</span>
               </div>
-              <div class="flex gap-2">
+              <div class="flex gap-1">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
@@ -158,14 +161,14 @@
                   stroke-width="2"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  class="lucide lucide-heart text-[#6E767D]"
+                  class="lucide lucide-heart text-[#6E767D] cursor-pointer hover:text-blue-500"
                 >
                   <path
                     d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"
                   />
                 </svg>                <span class="text-[#6E767D] text-sm">30</span>
               </div>
-              <div class="flex gap-2">
+              <div class="flex gap-2 cursor-pointer hover:text-blue-500 ">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
@@ -176,7 +179,7 @@
                   stroke-width="2"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  class="lucide lucide-arrow-up-from-line text-[#6E767D]"
+                  class="lucide lucide-arrow-up-from-line text-[#6E767D] hover:text-blue-500  "
                 >
                   <path d="m18 9-6-6-6 6" />
                   <path d="M12 3v14" />
@@ -188,189 +191,8 @@
 
         </div>
       @endeach
-      {{-- <div class="flex  px-4 py-4 ">
-        <div>
-          <img src="/resources/imgs/Tweet-Profile-Photo.svg" alt="profil user" class="flex justify-start" />
-        </div>
-        <div class="flex flex-col gap-3 w-full pl-3">
-          <div class="flex flex-col gap-1">
-            <span class="font-bold text-sm flex gap-1">CNN <img src="/resources/imgs/Verified.svg" class="w-5 h-5" /></span>
-            <p class="text-sm">
-              President Joe Biden touted a new agreement reached with the European Union to ease
-             Trump-era tariffs on aluminum and steel as a "major breakthrough" that would serve
-             to both strengthen the US steel industry and combat the global climate crisis.
-            </p>
-          </div>
-          <img src="/resources/imgs/Img.svg" alt="article" />
-          <div class="px-2 flex items-center justify-between pb-1">
-            <div class="flex gap-2">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-message-circle text-[#6E767D]"
-              >
-                <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
-              </svg>              <span class="text-[#6E767D] text-sm">30</span>
-            </div>
-            <div class="flex gap-2">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-repeat-2 text-[#6E767D]"
-              >
-                <path d="m2 9 3-3 3 3" />
-                <path d="M13 18H7a2 2 0 0 1-2-2V6" />
-                <path d="m22 15-3 3-3-3" />
-                <path d="M11 6h6a2 2 0 0 1 2 2v10" />
-              </svg>              <span class="text-[#6E767D] text-sm">30</span>
-            </div>
-            <div class="flex gap-2">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-heart text-[#6E767D]"
-              >
-                <path
-                  d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"
-                />
-              </svg>              <span class="text-[#6E767D] text-sm">30</span>
-            </div>
-            <div class="flex gap-2">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-arrow-up-from-line text-[#6E767D]"
-              >
-                <path d="m18 9-6-6-6 6" />
-                <path d="M12 3v14" />
-                <path d="M5 21h14" />
-              </svg>              <span class="text-[#6E767D] text-sm">30</span>
-            </div>
-          </div>
-        </div>
       
-      </div> --}}
-      {{-- de --}}
-      {{-- <div class="flex  px-4 py-4 ">
-        <div>
-          <img src="/resources/imgs/blog.svg" alt="profil user" class="flex justify-start" />
-        </div>
-        <div class="flex flex-col gap-3 w-full pl-3">
-          <div class="flex flex-col gap-1">
-            <span class="font-bold text-sm flex gap-1">The New York Times <img src="/resources/imgs/Verified.svg" class="w-5 h-5" />
-              <span>                @anytime
-              </span></span>
-            <p class="text-sm">
-              President Joe Biden touted a new agreement reached with the European Union to ease
-             Trump-era tariffs on aluminum and steel as a "major breakthrough" that would serve
-             to both strengthen the US steel industry and combat the global climate crisis.
-            </p>
-          </div>
-          <div class="px-2 flex items-center justify-between pb-1">
-            <div class="flex gap-2">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-message-circle text-[#6E767D]"
-              >
-                <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
-              </svg>              <span class="text-[#6E767D] text-sm">30</span>
-            </div>
-            <div class="flex gap-2">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-repeat-2 text-[#6E767D]"
-              >
-                <path d="m2 9 3-3 3 3" />
-                <path d="M13 18H7a2 2 0 0 1-2-2V6" />
-                <path d="m22 15-3 3-3-3" />
-                <path d="M11 6h6a2 2 0 0 1 2 2v10" />
-              </svg>              <span class="text-[#6E767D] text-sm">30</span>
-            </div>
-            <div class="flex gap-2">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-heart text-[#6E767D]"
-              >
-                <path
-                  d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"
-                />
-              </svg>              <span class="text-[#6E767D] text-sm">30</span>
-            </div>
-            <div class="flex gap-2">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-arrow-up-from-line text-[#6E767D]"
-              >
-                <path d="m18 9-6-6-6 6" />
-                <path d="M12 3v14" />
-                <path d="M5 21h14" />
-              </svg>              <span class="text-[#6E767D] text-sm">30</span>
-            </div>
-          </div>
-        </div>
       
-      </div> --}}
-      {{-- fin --}}
     </div>
 
     <div class="w-[360px] max-lg:hidden flex flex-col gap-3 pt-4 ml-[30px] rounded-2xl text-sm ">
