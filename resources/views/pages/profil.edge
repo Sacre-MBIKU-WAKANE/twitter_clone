@@ -105,6 +105,7 @@
       <div class="flex justify-between gap-2  border-b border-[#2F3336] relative w-full">
 
         <div class="flex flex-col justify-between gap-6 w-full bg-[#b9cad3] h-[199px]  ">
+          <img src="{{ singleUser.pic }}" alt="bnr" class="  h-[199px] object-cover" />
           <img
             src="{{ singleUser.pic }}"
             class=" w-[133px] h-[133px] absolute bottom-[-60px] z-20 rounded-full left-13  border-4 border-white"
@@ -244,7 +245,7 @@
               <div class="flex flex-col gap-3 w-full pl-3">
                 <div class="flex flex-col gap-1">
                   <span class="font-bold text-sm flex gap-1">{{ item.user.name }} {{ item.user.name }} <img src="/resources/imgs/Verified.svg" class="w-5 h-5" />
-                    <span>                      @pkudiatu
+                    <span>{{ item.user.username }}
                     </span></span>
                   <p class="text-sm">
                     {{ item.contenu }}
