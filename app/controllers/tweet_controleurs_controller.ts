@@ -5,16 +5,16 @@ import { users, tweets } from '../../resources/data/data.ts'
 export default class TweetControleursController {
   // methode permettant d'afficher les tweets sur la page d'accueil
   getPostHome(ctx: HttpContext) {
+    let user
     const tweetsResponses = tweets.map((tweet) => {
       const author = users.find((user) => user.IDuser === tweet.IDuser)
-
+      if (author?.IDuser === 1) user = author
       return {
         ...tweet,
         author,
       }
     })
-    // console.log(tweetsResponses)
-    return ctx.view.render('pages/home', { tweetsResponses })
+    return ctx.view.render('pages/home', { tweetsResponses, singleUser: user })
   }
 
   // methode permettant d'afficher les tweets correspondant à un utilisateur avec ses propre tweet
@@ -39,8 +39,6 @@ export default class TweetControleursController {
         rTweets: responseTweets,
         tweetCount: userTweets.length,
       })
-    } else {
-      console.log('not found')
     }
   }
 }
