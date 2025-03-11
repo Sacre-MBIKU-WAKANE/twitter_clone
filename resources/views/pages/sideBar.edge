@@ -1,61 +1,71 @@
-<div class="w-[275px]  flex  flex-col px-3 gap-3  min-h-full ">
-  <div class="flex flex-col px-3 gap-5 py-4  ">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class="lucide lucide-twitter "
-    >
-      <path
-        d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"
-      />
-    </svg>
-    <ul class="flex flex-col justify-start gap-5 ">
-      <li class="flex  items-center gap-4 ">
-        <a href="/" class="flex gap-4">          <img src="/resources/imgs/Home-Fill.png" />
-          Home</a>
-      </li>
-      <li class="flex items-center gap-4 cursor-pointer">
-        <img src="/resources/imgs/Explore.png" />
-        Explore
-      </li>
-      <li class="flex items-center gap-4 cursor-pointer">
-        <img src="/resources/imgs/Notifications.png" />
-        Notifications
-      </li>
-      <li class="flex items-center gap-4 cursor-pointer">
-        <img src="/resources/imgs/Messages.svg" />
-        Messages
-      </li>
-      <li class="flex items-center gap-4 cursor-pointer">
-        <img src="/resources/imgs/Bookmarks.svg" />
-        Bookmarks
-      </li>
-      <li class="flex items-center gap-4 cursor-pointer">
-        <img src="/resources/imgs/Lists.svg" />
-        Lists
-      </li>
-      <li class="flex items-center gap-4 cursor-pointer">
-        <a href="/{{ singleUser.username }}" class="flex items-center gap-4">          <img src="/resources/imgs/Profile.svg" />
-          Profile</a>
-      </li>
-      <li class="flex items-center gap-4 cursor-pointer">
-        <img src="/resources/imgs/More.svg" />
-        More
-      </li>
-    </ul>
+<div class="w-[275px]  flex  flex-col  justify-between  min-h-full ">
+  <div class="flex  flex-col px-3 gap-3 ">
+    <div class="flex flex-col px-3 gap-5 py-4  ">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="lucide lucide-twitter "
+      >
+        <path
+          d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"
+        />
+      </svg>
+      <ul class="flex flex-col justify-start gap-5 ">
+        <li class="flex  items-center gap-4 ">
+          <a href="/" class="flex gap-4">            <img src="/resources/imgs/Home-Fill.png" />
+            Home</a>
+        </li>
+        <li class="flex items-center gap-4 cursor-pointer">
+          <img src="/resources/imgs/Explore.png" />
+          Explore
+        </li>
+        <li class="flex items-center gap-4 cursor-pointer">
+          <img src="/resources/imgs/Notifications.png" />
+          Notifications
+        </li>
+        <li class="flex items-center gap-4 cursor-pointer">
+          <img src="/resources/imgs/Messages.svg" />
+          Messages
+        </li>
+        <li class="flex items-center gap-4 cursor-pointer">
+          <img src="/resources/imgs/Bookmarks.svg" />
+          Bookmarks
+        </li>
+        <li class="flex items-center gap-4 cursor-pointer">
+          <img src="/resources/imgs/Lists.svg" />
+          Lists
+        </li>
+        <li class="flex items-center gap-4 cursor-pointer">
+          <a href="/{{ singleUser.username }}" class="flex items-center gap-4">            <img src="/resources/imgs/Profile.svg" />
+            Profile</a>
+        </li>
+        <li class="flex items-center gap-4 cursor-pointer">
+          <img src="/resources/imgs/More.svg" />
+          More
+        </li>
+      </ul>
 
+    </div>
+    <div class="pl-3">
+      <button
+        class="bg-blue-500 rounded-4xl px-16 py-2 cursor-pointer duration-500 text-white hover:bg-[#202327] hover:text-[#D9D9D9]"
+      >Tweet</button>
+    </div>
   </div>
-  <div class="pl-3">
-    <button
-      class="bg-blue-500 rounded-4xl px-16 py-2 cursor-pointer duration-500 text-white hover:bg-[#202327] hover:text-[#D9D9D9]"
-    >Tweet</button>
+  <div class="flex  items-center justify-between pr-2 pb-3 ">
+    <a href="" class="flex  items-center gap-2">      <img src="{{ singleUser.pic }}" alt="profil" class="w-8 h-8 rounded-full object-cover ml-3" />
+      <div class="flex  flex-col">
+        <span class="flex items-center text-sm/6 gap-1">{{ singleUser.name }} {{ singleUser.prenom }}  <img src="/resources/imgs/Private.png" alt="more" class="w-4 h-4" /></span>
+        <span class="text-sm/4 text-[#6E767D]">{{ singleUser.username }}</span>
+      </div>
+    </a>
+    <img src="/resources/imgs/More.png" alt="more" class="w-5 h-5 object-cover " />
   </div>
-
 </div>
