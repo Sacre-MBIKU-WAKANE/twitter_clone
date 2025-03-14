@@ -5,9 +5,9 @@
   "type": "module",
   "license": "UNLICENSED",
   "scripts": {
-    "build": "node ace build ",
-    "start": "node server.js",
-    "install-dependencies": "npm install",
+    "build": "node ace build --production",
+  "start": "node build/server.js",
+    "dev": "node ace serve --hmr",
     "test": "node ace test",
     "lint": "eslint .",
     "format": "prettier --write .",
