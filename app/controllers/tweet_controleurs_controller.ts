@@ -1,5 +1,5 @@
 import type { HttpContext } from '@adonisjs/core/http'
-import { users, tweets } from '../../resources/data/data.ts'
+import { users, tweets } from '../../resources/data/data.js'
 
 // class controleur tweet
 export default class TweetControleursController {
