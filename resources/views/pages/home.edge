@@ -76,11 +76,12 @@
     {{-- sidebar --}}
 
     @include('pages/sidebar')
+    @eval(await auth.check())
 
     <div class="flex-none border border-[#2F3336] pt-2  max-lg:flex-1 md:w-1/2 max-lg:px-0 ">
       <div class="flex justify-between items-center border-b  border-[#2F3336] w-full">
         <h1 class="px-4 py-4  font-bold text-xl text-white  ">
-          Home
+          {{ auth.isAuthenticated ? auth.user.fullName : "Home" }}
         </h1>
         <img src="/resources/imgs/Top-Tweets.svg" />
       </div>
